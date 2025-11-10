@@ -1304,54 +1304,6 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Arrow",
-          "persistentUuid": "6fe65e8a-ff60-4f3e-b91e-f522d97b2d94",
-          "width": 0,
-          "x": 848,
-          "y": 416,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Arrow",
-          "persistentUuid": "6047f9cc-aa33-4eb9-89f7-5593f3b6a8c2",
-          "width": 0,
-          "x": 880,
-          "y": 432,
-          "zOrder": 11,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Arrow",
-          "persistentUuid": "e74c0428-0566-4717-b97c-b9614f961be9",
-          "width": 0,
-          "x": 848,
-          "y": 432,
-          "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         }
       ],
       "objects": [
@@ -3517,7 +3469,23 @@
           "name": "Arrow",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "Vx",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Vy",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "BaseSpeed",
+              "type": "number",
+              "value": 800
+            }
+          ],
           "effects": [
             {
               "effectType": "Outline",
@@ -3534,6 +3502,30 @@
           ],
           "behaviors": [
             {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Static",
+              "bullet": true,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Box",
+              "shapeDimensionA": 25,
+              "shapeDimensionB": 2,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1,
+              "friction": 0.3,
+              "restitution": 0.1,
+              "linearDamping": 0.1,
+              "angularDamping": 3,
+              "gravityScale": 0.9,
+              "layers": 1,
+              "masks": 1
+            },
+            {
+              "isFolded": true,
               "name": "ScreenWrap",
               "type": "ScreenWrap::ScreenWrap",
               "HorizontalWrapping": true,
@@ -4577,7 +4569,7 @@
                             "=",
                             "Player.X()",
                             "=",
-                            "Player.Y()-2"
+                            "Player.Y()-10"
                           ]
                         },
                         {
@@ -4617,18 +4609,22 @@
                             "=",
                             "\"FiringArrow\""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "value": "AddForceAL"
+                            "value": "Physics2::SetDynamic"
                           },
                           "parameters": [
                             "Arrow",
-                            "Arrow.Angle()",
-                            "350",
-                            "1"
+                            "Physics2"
                           ]
                         },
                         {
@@ -4644,24 +4640,124 @@
                         },
                         {
                           "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                            "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
                             "Arrow",
-                            "Animation",
+                            "Vx",
                             "=",
-                            "\"Launched\""
+                            "Arrow.BaseSpeed * cos(Arrow.Angle() * 3.14159 / 180)"
                           ]
                         },
                         {
                           "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                            "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
-                            "Player",
-                            "Animation",
+                            "Arrow",
+                            "Vy",
                             "=",
-                            "\"Idle\""
+                            "Arrow.BaseSpeed * sin(Arrow.Angle() * 3.14159 / 180)"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Or"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Arrow",
+                                    "Vx",
+                                    ">",
+                                    "Arrow.BaseSpeed - 50"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Arrow",
+                                    "Vx",
+                                    "<",
+                                    "-(Arrow.BaseSpeed - 50)"
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Arrow",
+                                "Vx",
+                                "=",
+                                "Arrow.Vx * 1.6"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Physics2::LinearVelocityY"
+                              },
+                              "parameters": [
+                                "Arrow",
+                                "Physics2",
+                                "=",
+                                "Arrow.Vy"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Physics2::LinearVelocityX"
+                              },
+                              "parameters": [
+                                "Arrow",
+                                "Physics2",
+                                "=",
+                                "Arrow.Vx"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "Arrow",
+                                "Animation",
+                                "=",
+                                "\"Launched\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Animation",
+                                "=",
+                                "\"Idle\""
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -4729,10 +4825,21 @@
               "actions": [
                 {
                   "type": {
-                    "value": "Arreter"
+                    "value": "ActivateBehavior"
                   },
                   "parameters": [
-                    "Arrow"
+                    "Arrow",
+                    "Physics2",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Physics2::SetStatic"
+                  },
+                  "parameters": [
+                    "Arrow",
+                    "Physics2"
                   ]
                 },
                 {
@@ -4744,6 +4851,46 @@
                     "Animation",
                     "=",
                     "\"Stopped\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Arrow gravity"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                  },
+                  "parameters": [
+                    "Arrow",
+                    "Animation",
+                    "=",
+                    "\"Launched\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "Arrow",
+                    "=",
+                    "Arrow.Physics2::LinearVelocityAngle()"
                   ]
                 }
               ]
@@ -4842,6 +4989,15 @@
         {
           "name": "Opacity",
           "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Physics2",
+          "type": "Physics2::Physics2Behavior",
+          "gravityX": 0,
+          "gravityY": 9.8,
+          "worldScale": 100,
+          "scaleX": 100,
+          "scaleY": 100
         },
         {
           "name": "Platform",
