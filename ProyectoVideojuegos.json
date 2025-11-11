@@ -2893,8 +2893,8 @@
           "name": "Player",
           "persistentUuid": "3ff7a40f-b247-499d-bc29-6a3f0c195dff",
           "width": 0,
-          "x": 704,
-          "y": 452,
+          "x": 768,
+          "y": 564,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -4751,14 +4751,14 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 16,
-                        "y": 20
+                        "x": 49,
+                        "y": 49
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 49,
+                        "y": 49
                       },
                       "customCollisionMask": [
                         [
@@ -4783,14 +4783,14 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 16,
-                        "y": 20
+                        "x": 49,
+                        "y": 49
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 49,
+                        "y": 49
                       },
                       "customCollisionMask": [
                         [
@@ -4819,14 +4819,14 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 16,
-                        "y": 20
+                        "x": 49,
+                        "y": 49
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 49,
+                        "y": 49
                       },
                       "customCollisionMask": [
                         [
@@ -4855,14 +4855,14 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 16,
-                        "y": 20
+                        "x": 49,
+                        "y": 49
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 49,
+                        "y": 49
                       },
                       "customCollisionMask": [
                         [
@@ -4891,14 +4891,14 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 16,
-                        "y": 20
+                        "x": 49,
+                        "y": 49
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 49,
+                        "y": 49
                       },
                       "customCollisionMask": [
                         [
@@ -4927,14 +4927,14 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 16,
-                        "y": 20
+                        "x": 49,
+                        "y": 49
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 49,
+                        "y": 49
                       },
                       "customCollisionMask": [
                         [
@@ -4963,14 +4963,14 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 16,
-                        "y": 20
+                        "x": 49,
+                        "y": 49
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 49,
+                        "y": 49
                       },
                       "customCollisionMask": [
                         [
@@ -5332,7 +5332,7 @@
           ]
         },
         {
-          "adaptCollisionMaskAutomatically": true,
+          "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "4b5760aae85a68f03ca4bbfcbc0976099704579ee96f1af16e75017c62f36387",
           "name": "Player2",
           "type": "Sprite",
@@ -5494,8 +5494,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -5530,8 +5530,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -5566,8 +5566,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -5602,8 +5602,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -5638,8 +5638,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -5674,8 +5674,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -5710,8 +5710,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -5746,8 +5746,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -5782,8 +5782,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -5818,8 +5818,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -5854,8 +5854,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -5902,8 +5902,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -5938,8 +5938,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -5974,8 +5974,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6010,8 +6010,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6046,8 +6046,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6082,8 +6082,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6118,8 +6118,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6154,8 +6154,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6190,8 +6190,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6226,8 +6226,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6262,8 +6262,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6298,8 +6298,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6346,8 +6346,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6394,8 +6394,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6442,8 +6442,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6478,8 +6478,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6514,8 +6514,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6550,8 +6550,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6586,8 +6586,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6622,8 +6622,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6658,8 +6658,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6706,8 +6706,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6742,8 +6742,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6778,8 +6778,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6814,8 +6814,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6850,8 +6850,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6886,8 +6886,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6934,8 +6934,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6970,8 +6970,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7006,8 +7006,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7042,8 +7042,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7078,8 +7078,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7111,11 +7111,247 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.1429,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 49,
+                            "y": 49
+                          },
+                          {
+                            "x": 49,
+                            "y": 49
+                          },
+                          {
+                            "x": 49,
+                            "y": 49
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 49,
+                            "y": 49
+                          },
+                          {
+                            "x": 49,
+                            "y": 49
+                          },
+                          {
+                            "x": 49,
+                            "y": 49
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 49,
+                            "y": 49
+                          },
+                          {
+                            "x": 49,
+                            "y": 49
+                          },
+                          {
+                            "x": 49,
+                            "y": 49
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 49,
+                            "y": 49
+                          },
+                          {
+                            "x": 49,
+                            "y": 49
+                          },
+                          {
+                            "x": 49,
+                            "y": 49
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 49,
+                            "y": 49
+                          },
+                          {
+                            "x": 49,
+                            "y": 49
+                          },
+                          {
+                            "x": 49,
+                            "y": 49
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 49,
+                            "y": 49
+                          },
+                          {
+                            "x": 49,
+                            "y": 49
+                          },
+                          {
+                            "x": 49,
+                            "y": 49
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 49,
+                            "y": 49
+                          },
+                          {
+                            "x": 49,
+                            "y": 49
+                          },
+                          {
+                            "x": 49,
+                            "y": 49
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
         {
-          "adaptCollisionMaskAutomatically": true,
+          "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "b367633a42cc9d5f60f210cc09db68893d954553440842a40d4045a040b63b6b",
           "name": "Player3",
           "type": "Sprite",
@@ -7277,8 +7513,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7313,8 +7549,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7349,8 +7585,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7385,8 +7621,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7421,8 +7657,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7457,8 +7693,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7493,8 +7729,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7529,8 +7765,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7565,8 +7801,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7601,8 +7837,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7637,8 +7873,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7685,8 +7921,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7721,8 +7957,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7757,8 +7993,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7793,8 +8029,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7829,8 +8065,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7865,8 +8101,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7901,8 +8137,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7937,8 +8173,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7973,8 +8209,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8009,8 +8245,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8045,8 +8281,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8081,8 +8317,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8129,8 +8365,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8177,8 +8413,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8225,8 +8461,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8261,8 +8497,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8297,8 +8533,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8333,8 +8569,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8369,8 +8605,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8405,8 +8641,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8441,8 +8677,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8489,8 +8725,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8525,8 +8761,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8561,8 +8797,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8597,8 +8833,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8633,8 +8869,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8669,8 +8905,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8717,8 +8953,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8753,8 +8989,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8789,8 +9025,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8825,8 +9061,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8861,8 +9097,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8894,11 +9130,247 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "Desappearing",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.1429,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
         {
-          "adaptCollisionMaskAutomatically": true,
+          "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "77688d822398f7461205471d22bc35f98117c78391e1ff9c2607791176bb6cb4",
           "name": "Player4",
           "type": "Sprite",
@@ -9058,8 +9530,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9094,8 +9566,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9130,8 +9602,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9166,8 +9638,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9202,8 +9674,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9238,8 +9710,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9274,8 +9746,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9310,8 +9782,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9346,8 +9818,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9382,8 +9854,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9418,8 +9890,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9466,8 +9938,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9502,8 +9974,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9538,8 +10010,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9574,8 +10046,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9610,8 +10082,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9646,8 +10118,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9682,8 +10154,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9718,8 +10190,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9754,8 +10226,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9790,8 +10262,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9826,8 +10298,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9862,8 +10334,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9910,8 +10382,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9958,8 +10430,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10006,8 +10478,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10042,8 +10514,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10078,8 +10550,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10114,8 +10586,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10150,8 +10622,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10186,8 +10658,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10222,8 +10694,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10270,8 +10742,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10306,8 +10778,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10342,8 +10814,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10378,8 +10850,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10414,8 +10886,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10450,8 +10922,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10498,8 +10970,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10534,8 +11006,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10570,8 +11042,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10606,8 +11078,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10642,8 +11114,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10668,6 +11140,242 @@
                           {
                             "x": 6,
                             "y": 32
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Desappearing",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Desappearing_7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 48,
+                        "y": 48
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
                           }
                         ]
                       ]
