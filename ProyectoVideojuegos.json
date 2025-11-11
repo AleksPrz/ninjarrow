@@ -2877,29 +2877,31 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 1.2121641972173682,
+        "zoomFactor": 0.8416428125373115,
         "windowMask": false,
         "selectedLayer": ""
       },
-      "objectsGroups": [],
+      "objectsGroups": [
+        {
+          "name": "Player",
+          "objects": [
+            {
+              "name": "Player1"
+            },
+            {
+              "name": "Player2"
+            },
+            {
+              "name": "Player3"
+            },
+            {
+              "name": "Player4"
+            }
+          ]
+        }
+      ],
       "variables": [],
       "instances": [
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Player",
-          "persistentUuid": "3ff7a40f-b247-499d-bc29-6a3f0c195dff",
-          "width": 0,
-          "x": 768,
-          "y": 564,
-          "zOrder": 7,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
         {
           "angle": 0,
           "customSize": false,
@@ -2936,13 +2938,29 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Player1",
+          "persistentUuid": "2febe7f4-8bd2-43a7-bc23-550bd4a36c92",
+          "width": 0,
+          "x": 848,
+          "y": 432,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
         {
           "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "c57f38c31351d633b955c1ee10c00926c602e44ba3f0bfaaf611cebb031deb79",
-          "name": "Player",
+          "name": "Player1",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [
@@ -5027,7 +5045,13 @@
           "name": "ArrowBar",
           "type": "TiledUnitsBar::TiledUnitsBar",
           "variant": "Arrow Bar",
-          "variables": [],
+          "variables": [
+            {
+              "name": "PlayerId",
+              "type": "number",
+              "value": 1
+            }
+          ],
           "effects": [
             {
               "effectType": "Outline",
@@ -11690,7 +11714,7 @@
             "folderName": "Players",
             "children": [
               {
-                "objectName": "Player"
+                "objectName": "Player1"
               },
               {
                 "objectName": "Player2"
@@ -11762,19 +11786,49 @@
               ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Create ArrowBar for every Player"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Player",
                   "conditions": [],
-                  "actions": [
+                  "actions": [],
+                  "events": [
                     {
-                      "type": {
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "ArrowBar",
-                        "Player.X()-(ArrowBar.Width()/3)",
-                        "Player.Y()-32",
-                        ""
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "ArrowBar",
+                            "Player.X() - (ArrowBar.Width() / 3)",
+                            "Player.Y() - 32",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "LinkedObjects::LinkObjects"
+                          },
+                          "parameters": [
+                            "",
+                            "Player",
+                            "ArrowBar"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -11785,506 +11839,11 @@
           "parameters": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "Player",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "disabled": true,
-          "name": "Controls",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "name": "Movement",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Space\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PlatformBehavior::SimulateJumpKey"
-                      },
-                      "parameters": [
-                        "Player",
-                        "PlatformerObject"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Up\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PlatformBehavior::SimulateUpKey"
-                      },
-                      "parameters": [
-                        "Player",
-                        "PlatformerObject"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Down\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PlatformBehavior::SimulateDownKey"
-                      },
-                      "parameters": [
-                        "Player",
-                        "PlatformerObject"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Left\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PlatformBehavior::SimulateLeftKey"
-                      },
-                      "parameters": [
-                        "Player",
-                        "PlatformerObject"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Right\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "PlatformBehavior::SimulateRightKey"
-                      },
-                      "parameters": [
-                        "Player",
-                        "PlatformerObject"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"c\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "AdvancedJump::HorizontalDash::SimulateDashKey"
-                      },
-                      "parameters": [
-                        "Player",
-                        "HorizontalDash",
-                        ""
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "parameters": []
-            },
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "name": "Aiming and Firing Arrows",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Keyboard"
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Right\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Player",
-                        "AimingAngle",
-                        "=",
-                        "0"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Left\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Player",
-                        "AimingAngle",
-                        "=",
-                        "180"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Down\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Player",
-                        "AimingAngle",
-                        "=",
-                        "90"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "KeyFromTextPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Right\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Player",
-                            "AimingAngle",
-                            "=",
-                            "45"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "KeyFromTextPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Left\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Player",
-                            "AimingAngle",
-                            "=",
-                            "135"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Up\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Player",
-                        "AimingAngle",
-                        "=",
-                        "270"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "KeyFromTextPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Right\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Player",
-                            "AimingAngle",
-                            "=",
-                            "315"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "KeyFromTextPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Left\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Player",
-                            "AimingAngle",
-                            "=",
-                            "225"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"v\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetStringObjectVariable"
-                      },
-                      "parameters": [
-                        "Player",
-                        "State",
-                        "=",
-                        "\"Aiming\""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextReleased"
-                      },
-                      "parameters": [
-                        "",
-                        "\"v\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetStringObjectVariable"
-                      },
-                      "parameters": [
-                        "Player",
-                        "State",
-                        "=",
-                        "\"FiringArrow\""
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "parameters": []
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
-            }
-          ],
-          "parameters": []
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "HandleArrowBars"
         },
         {
           "colorB": 228,
@@ -12308,35 +11867,6 @@
               "comment": "Position and quantity of ArrowBar"
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "ArrowBar",
-                    "=",
-                    "Player.X()-(ArrowBar.Width()/3)",
-                    "=",
-                    "Player.Y()-32"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TiledUnitsBar::TiledUnitsBar::SetValue"
-                  },
-                  "parameters": [
-                    "ArrowBar",
-                    "=",
-                    "Player.RemainingArrows",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -12356,7 +11886,7 @@
                     "value": "AnimatableCapability::AnimatableBehavior::Name"
                   },
                   "parameters": [
-                    "Player",
+                    "Player1",
                     "Animation",
                     "!=",
                     "\"Death\""
@@ -12385,7 +11915,7 @@
                         "value": "Distance"
                       },
                       "parameters": [
-                        "Player",
+                        "Player1",
                         "Arrow",
                         "32",
                         ""
@@ -12414,7 +11944,7 @@
                             "value": "NumberObjectVariable"
                           },
                           "parameters": [
-                            "Player",
+                            "Player1",
                             "RemainingArrows",
                             "<",
                             "3"
@@ -12436,7 +11966,7 @@
                             "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
-                            "Player",
+                            "Player1",
                             "RemainingArrows",
                             "+",
                             "1"
@@ -12466,7 +11996,7 @@
                         "value": "NumberObjectVariable"
                       },
                       "parameters": [
-                        "Player",
+                        "Player1",
                         "RemainingArrows",
                         ">",
                         "0"
@@ -12477,7 +12007,7 @@
                         "value": "StringObjectVariable"
                       },
                       "parameters": [
-                        "Player",
+                        "Player1",
                         "State",
                         "=",
                         "\"Aiming\""
@@ -12498,8 +12028,8 @@
                       "parameters": [
                         "",
                         "Arrow",
-                        "Player.X()",
-                        "Player.Y()-2",
+                        "Player1.X()",
+                        "Player1.Y() - 2",
                         ""
                       ]
                     }
@@ -12542,7 +12072,7 @@
                             "value": "StringObjectVariable"
                           },
                           "parameters": [
-                            "Player",
+                            "Player1",
                             "State",
                             "=",
                             "\"Aiming\""
@@ -12557,9 +12087,9 @@
                           "parameters": [
                             "Arrow",
                             "=",
-                            "Player.X()",
+                            "Player1.X()",
                             "=",
-                            "Player.Y()-10"
+                            "Player1.Y() - 10"
                           ]
                         },
                         {
@@ -12569,7 +12099,7 @@
                           "parameters": [
                             "Arrow",
                             "=",
-                            "Player.AimingAngle"
+                            "Player1.AimingAngle"
                           ]
                         }
                       ]
@@ -12594,7 +12124,7 @@
                             "value": "StringObjectVariable"
                           },
                           "parameters": [
-                            "Player",
+                            "Player1",
                             "State",
                             "=",
                             "\"FiringArrow\""
@@ -12622,7 +12152,7 @@
                             "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
-                            "Player",
+                            "Player1",
                             "RemainingArrows",
                             "-",
                             "1"
@@ -13021,7 +12551,52 @@
       ]
     }
   ],
-  "externalEvents": [],
+  "externalEvents": [
+    {
+      "associatedLayout": "Game Scene",
+      "name": "HandleArrowBars",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Player",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "ArrowBar",
+                    "Player",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "ArrowBar",
+                    "=",
+                    "Player.X() - (ArrowBar.Width() / 3)",
+                    "=",
+                    "Player.Y() - 32"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "eventsFunctionsExtensions": [
     {
       "author": "",
@@ -25745,6 +25320,7 @@
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -26171,6 +25747,7 @@
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -26398,6 +25975,11 @@
                     }
                   ],
                   "parameters": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
                 }
               ],
               "parameters": [
@@ -26534,6 +26116,84 @@
                   "name": "Behavior",
                   "supplementaryInformation": "Player::PlayerBehavior",
                   "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Condition",
+              "name": "ComparePlayerId",
+              "sentence": "_PARAM2_ equals _PARAM0_ PlayerId",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Id",
+                        "=",
+                        "PlayerId"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Id",
+                        "!=",
+                        "PlayerId"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "False"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "Sprite",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "Player::PlayerBehavior",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Id",
+                  "name": "Id",
+                  "type": "expression"
                 }
               ],
               "objectGroups": []
