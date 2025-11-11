@@ -1395,15 +1395,15 @@
               "PlatformerCharacter": "PlatformerObject"
             },
             {
+              "isFolded": true,
+              "name": "PlatformerObject",
+              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "acceleration": 1800,
               "deceleration": 2000,
               "gravity": 1500,
               "ignoreDefaultControls": true,
-              "isFolded": true,
               "jumpSpeed": 550,
               "maxFallingSpeed": 600,
-              "name": "PlatformerObject",
-              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "canGoDownFromJumpthru": true,
               "canGrabPlatforms": false,
               "canGrabWithoutMoving": true,
@@ -4397,7 +4397,7 @@
                       "parameters": [
                         "Player",
                         "Arrow",
-                        "16",
+                        "32",
                         ""
                       ]
                     }
@@ -4745,17 +4745,6 @@
                                 "Animation",
                                 "=",
                                 "\"Launched\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Animation",
-                                "=",
-                                "\"Idle\""
                               ]
                             }
                           ]
