@@ -64,386 +64,10 @@
   "resources": {
     "resources": [
       {
-        "file": "assets/Player/Ninja Frog/Idle (32x32).png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\Player\\Ninja Frog\\Idle (32x32).png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player/Ninja Frog/Jump (32x32).png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\Player\\Ninja Frog\\Jump (32x32).png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player2",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player3.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player3",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player4.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player4",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player5.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player5",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player6.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player6",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player7.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player7",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player8.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player8",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player9.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player9",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player10.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player10",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player11.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player11",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player12.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player12",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player13.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player13",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player14.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player14",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player15.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player15",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player16.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player16",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player17.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player17",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player18.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player18",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player19.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player19",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player20.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player20",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player21.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player21",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player22.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player22",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player23.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player23",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player/Ninja Frog/Fall (32x32).png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\Player\\Ninja Frog\\Fall (32x32).png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player24.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player24",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player25.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player25",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player26.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player26",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player27.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player27",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player28.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player28",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player29.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player29",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player30.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player30",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player31.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player31",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player32.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player32",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player33.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player33",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player34.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player34",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player35.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player35",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player36.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player36",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player/Ninja Frog/Wall Jump (32x32).png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\Player\\Ninja Frog\\Wall Jump (32x32).png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player37.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player37",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player38.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player38",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player39.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player39",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player40.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player40",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player41.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player41",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
         "file": "assets/actual assets/Terrain (16x16).png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\actual assets\\Terrain (16x16).png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/actual assets/Arrow_symbol_Background.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\actual assets\\Arrow_symbol_Background.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/actual assets/Arrow_symbol.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\actual assets\\Arrow_symbol.png",
         "smoothed": true,
         "userAdded": false
       },
@@ -988,130 +612,6 @@
         }
       },
       {
-        "file": "assets/9patch_Stone 9Patch_all_16.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "9patch_Stone 9Patch_all_16.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Pixel Adventure Pack/Terrain/0d4e1fc25b009b7424360bba5f4cb126c82390b044aabce180aebf4806b9aff2_9patch_Stone 9Patch_all_16.png",
-          "name": "9patch_Stone 9Patch_all_16.png"
-        }
-      },
-      {
-        "file": "assets/9patch_Green Grass 9Patch_all_16.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "9patch_Green Grass 9Patch_all_16.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Pixel Adventure Pack/Terrain/d09644b38492bb7471261a37cf98e3c9685d4284cf3a4824bd52fc9c667736dc_9patch_Green Grass 9Patch_all_16.png",
-          "name": "9patch_Green Grass 9Patch_all_16.png"
-        }
-      },
-      {
-        "file": "assets/9patch_Wood 9Patch_all_16.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "9patch_Wood 9Patch_all_16.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Pixel Adventure Pack/Terrain/3822dec39b16fd3c1767f113a4e99024533cec47dc38fe0664902ca2a6950ce9_9patch_Wood 9Patch_all_16.png",
-          "name": "9patch_Wood 9Patch_all_16.png"
-        }
-      },
-      {
-        "file": "assets/9patch_Pink Grass 9Patch_all_16.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "9patch_Pink Grass 9Patch_all_16.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Pixel Adventure Pack/Terrain/5130937db1faf6687b323f27ea62a519d5023e423a8f2fa9060fc9c55b444dd6_9patch_Pink Grass 9Patch_all_16.png",
-          "name": "9patch_Pink Grass 9Patch_all_16.png"
-        }
-      },
-      {
-        "file": "assets/9patch_Leaves 9Patch_all_16.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "9patch_Leaves 9Patch_all_16.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Pixel Adventure Pack/Terrain/97c06143667dd091a9fd270eec0f17dce22326dbf6b74feb405cc8f943527106_9patch_Leaves 9Patch_all_16.png",
-          "name": "9patch_Leaves 9Patch_all_16.png"
-        }
-      },
-      {
-        "file": "assets/9patch_Orange Grass 9Patch_all_16.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "9patch_Orange Grass 9Patch_all_16.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Pixel Adventure Pack/Terrain/3a3a78f6934ffc19ea65f93bd09e4e3d83d3c3d5fd73331bdeedd8b133d90d94_9patch_Orange Grass 9Patch_all_16.png",
-          "name": "9patch_Orange Grass 9Patch_all_16.png"
-        }
-      },
-      {
-        "file": "assets/Gold Platform.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Gold Platform.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Pixel Adventure Pack/Terrain/aa812f1b7300221d0caea941eb2c6195eedf6a826681ad1e875968c8c1c41f09_Gold Platform.png",
-          "name": "Gold Platform.png"
-        }
-      },
-      {
-        "file": "assets/Wood Platform.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Wood Platform.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Pixel Adventure Pack/Terrain/b5ea910fe2de325b41bee2f4fe85fddabde4eb137c05b1b2096edfc64127d93e_Wood Platform.png",
-          "name": "Wood Platform.png"
-        }
-      },
-      {
-        "file": "assets/Stone Platform.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Stone Platform.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Pixel Adventure Pack/Terrain/8d43fc0268490e243d8a113c159d6e3a32cd6be05019ae18d7987e28802bfb87_Stone Platform.png",
-          "name": "Stone Platform.png"
-        }
-      },
-      {
-        "file": "assets/New image.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
-        "name": "New image",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/New image2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
-        "name": "New image2",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
         "file": "assets/New image3.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"pskl\":{},\"localFilePath\":\"assets/New image3.png\"}",
@@ -1128,14 +628,6 @@
         "userAdded": false
       },
       {
-        "file": "assets/NewSprite.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "NewSprite",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
         "file": "assets/NewSprite2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -1144,74 +636,10 @@
         "userAdded": false
       },
       {
-        "file": "assets/actual assets/Arrow.png",
-        "kind": "image",
-        "metadata": "{\"localFilePath\":\"assets/actual assets/Arrow.png\",\"extension\":\".png\"}",
-        "name": "assets\\actual assets\\Arrow.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
         "file": "assets/Ready.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Ready.png\"}",
         "name": "Ready",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Death.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Death",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Death2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Death2",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Death3.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Death3",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Death4.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Death4",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Death5.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Death5",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Death6.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Death6",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Death7.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Death7",
         "smoothed": true,
         "userAdded": false
       },
@@ -2877,7 +2305,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 1.0269425874981082,
+        "zoomFactor": 0.7370816317994041,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -4085,7 +3513,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.1429,
+                  "timeBetweenFrames": 0.075,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -4769,7 +4197,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.1429,
+                  "timeBetweenFrames": 0.09,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -5466,7 +4894,8 @@
               "RemainingArrows": 3,
               "PlatformerBehavior": "PlatformerObject",
               "HorizontalDashBehavior": "HorizontalDash",
-              "PlatformerGamepadMapperBehavior": "PlatformerGamepadMapper"
+              "PlatformerGamepadMapperBehavior": "PlatformerGamepadMapper",
+              "Id": 2
             },
             {
               "isFolded": true,
@@ -6460,7 +5889,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.1429,
+                  "timeBetweenFrames": 0.075,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -7139,12 +6568,12 @@
               ]
             },
             {
-              "name": "",
+              "name": "Desappearing",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.1429,
+                  "timeBetweenFrames": 0.09,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -7485,7 +6914,8 @@
               "RemainingArrows": 3,
               "PlatformerBehavior": "PlatformerObject",
               "HorizontalDashBehavior": "HorizontalDash",
-              "PlatformerGamepadMapperBehavior": "PlatformerGamepadMapper"
+              "PlatformerGamepadMapperBehavior": "PlatformerGamepadMapper",
+              "Id": 3
             },
             {
               "isFolded": true,
@@ -8479,7 +7909,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.1429,
+                  "timeBetweenFrames": 0.075,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -9163,7 +8593,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.1429,
+                  "timeBetweenFrames": 0.09,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -9502,7 +8932,8 @@
               "RemainingArrows": 3,
               "PlatformerBehavior": "PlatformerObject",
               "HorizontalDashBehavior": "HorizontalDash",
-              "PlatformerGamepadMapperBehavior": "PlatformerGamepadMapper"
+              "PlatformerGamepadMapperBehavior": "PlatformerGamepadMapper",
+              "Id": 4
             },
             {
               "isFolded": true,
@@ -10496,7 +9927,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.1429,
+                  "timeBetweenFrames": 0.075,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -11180,7 +10611,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.09,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -12057,6 +11488,35 @@
                     ""
                   ]
                 }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "MultiplayerArrowShooter::PlayerBehavior::IsAlive"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlayerBehavior",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "ArrowBar",
+                        ""
+                      ]
+                    }
+                  ]
+                }
               ]
             }
           ]
@@ -12228,6 +11688,18 @@
                         "",
                         "Player",
                         "Arrow"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MultiplayerArrowShooter::ArrowBehavior::SetPlayerId"
+                      },
+                      "parameters": [
+                        "Arrow",
+                        "ArrowBehavior",
+                        "=",
+                        "Player.PlayerBehavior::Id()",
+                        ""
                       ]
                     }
                   ]
@@ -12447,8 +11919,59 @@
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": []
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Arrow",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::Name"
+                      },
+                      "parameters": [
+                        "Arrow",
+                        "Animation",
+                        "=",
+                        "\"Launched\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "Arrow.ArrowBehavior::PlayerId()",
+                        "!=",
+                        "Player.PlayerBehavior::Id()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MultiplayerArrowShooter::PlayerBehavior::Die"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlayerBehavior",
+                        ""
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -25240,7 +24763,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "PlayerId",
+                            "Id",
                             "=",
                             "1"
                           ]
@@ -25553,6 +25076,12 @@
                                 "=",
                                 "\"Aiming\""
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
                             }
                           ],
                           "actions": [
@@ -25677,7 +25206,7 @@
                           },
                           "parameters": [
                             "InputType",
-                            "PlayerId",
+                            "Id",
                             "\"Gamepad\""
                           ]
                         }
@@ -25699,7 +25228,7 @@
                                   },
                                   "parameters": [
                                     "",
-                                    "PlayerId",
+                                    "Id",
                                     "\"X\"",
                                     ""
                                   ]
@@ -25755,12 +25284,18 @@
                                   },
                                   "parameters": [
                                     "",
-                                    "PlayerId",
+                                    "Id",
                                     "\"X\"",
                                     ""
                                   ]
                                 }
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
                             }
                           ],
                           "actions": [
@@ -25791,7 +25326,7 @@
                                   },
                                   "parameters": [
                                     "",
-                                    "PlayerId",
+                                    "Id",
                                     "\"LT\"",
                                     ""
                                   ]
@@ -25802,7 +25337,7 @@
                                   },
                                   "parameters": [
                                     "",
-                                    "PlayerId",
+                                    "Id",
                                     "\"LB\"",
                                     ""
                                   ]
@@ -25813,7 +25348,7 @@
                                   },
                                   "parameters": [
                                     "",
-                                    "PlayerId",
+                                    "Id",
                                     "\"L2\"",
                                     ""
                                   ]
@@ -25824,7 +25359,7 @@
                                   },
                                   "parameters": [
                                     "",
-                                    "PlayerId",
+                                    "Id",
                                     "\"R2\"",
                                     ""
                                   ]
@@ -25891,7 +25426,7 @@
                           },
                           "parameters": [
                             "",
-                            "PlayerId",
+                            "Id",
                             "\"Left\"",
                             "\"Any\"",
                             ""
@@ -25906,7 +25441,7 @@
                           "parameters": [
                             "AimingAngle",
                             "=",
-                            "Gamepads::StickAngle(PlayerId, \"Left\")"
+                            "Gamepads::StickAngle(Id, \"Left\")"
                           ]
                         }
                       ]
@@ -25932,7 +25467,7 @@
                           },
                           "parameters": [
                             "",
-                            "PlayerId",
+                            "Id",
                             "\"Right\"",
                             ""
                           ]
@@ -25960,7 +25495,7 @@
                           },
                           "parameters": [
                             "",
-                            "PlayerId",
+                            "Id",
                             "\"Left\"",
                             ""
                           ]
@@ -25988,7 +25523,7 @@
                           },
                           "parameters": [
                             "",
-                            "PlayerId",
+                            "Id",
                             "\"Down\"",
                             ""
                           ]
@@ -26016,7 +25551,7 @@
                               },
                               "parameters": [
                                 "",
-                                "PlayerId",
+                                "Id",
                                 "\"Right\"",
                                 ""
                               ]
@@ -26044,7 +25579,7 @@
                               },
                               "parameters": [
                                 "",
-                                "PlayerId",
+                                "Id",
                                 "\"Left\"",
                                 ""
                               ]
@@ -26074,7 +25609,7 @@
                           },
                           "parameters": [
                             "",
-                            "PlayerId",
+                            "Id",
                             "\"Up\"",
                             ""
                           ]
@@ -26102,7 +25637,7 @@
                               },
                               "parameters": [
                                 "",
-                                "PlayerId",
+                                "Id",
                                 "\"Right\"",
                                 ""
                               ]
@@ -26130,7 +25665,7 @@
                               },
                               "parameters": [
                                 "",
-                                "PlayerId",
+                                "Id",
                                 "\"Left\"",
                                 ""
                               ]
@@ -26201,6 +25736,83 @@
             {
               "fullName": "",
               "functionType": "Action",
+              "name": "Die",
+              "sentence": "Completely annihilate _PARAM0_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "State",
+                        "=",
+                        "\"Idle\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "IsAlive",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Animation",
+                        "=",
+                        "\"Hit\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Object",
+                        "PlatformerBehavior",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "Sprite",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "MultiplayerArrowShooter::PlayerBehavior",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
               "name": "doStepPreEvents",
               "sentence": "",
               "events": [
@@ -26226,6 +25838,92 @@
                       "parameters": [
                         "Object",
                         "Behavior",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Handle death"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::Name"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Animation",
+                        "=",
+                        "\"Hit\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Animation"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Animation",
+                        "=",
+                        "\"Desappearing\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::Name"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Animation",
+                        "=",
+                        "\"Desappearing\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Animation"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Object",
                         ""
                       ]
                     }
@@ -26658,6 +26356,88 @@
                 }
               ],
               "objectGroups": []
+            },
+            {
+              "description": "the id of the object.",
+              "fullName": "Id",
+              "functionType": "ExpressionAndCondition",
+              "group": "Player Behavior configuration",
+              "name": "Id",
+              "sentence": "the id",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "Id"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "Sprite",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "MultiplayerArrowShooter::PlayerBehavior",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "Id",
+              "name": "SetId",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Id",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "Sprite",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "MultiplayerArrowShooter::PlayerBehavior",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
             }
           ],
           "propertyDescriptors": [
@@ -26672,7 +26452,7 @@
               "value": "1",
               "type": "Number",
               "label": "",
-              "name": "PlayerId"
+              "name": "Id"
             },
             {
               "value": "0",
@@ -27176,6 +26956,88 @@
                 }
               ],
               "objectGroups": []
+            },
+            {
+              "description": "the playerId of the object.",
+              "fullName": "PlayerId",
+              "functionType": "ExpressionAndCondition",
+              "group": "ArrowBehavior configuration",
+              "name": "PlayerId",
+              "sentence": "the playerId",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnNumber"
+                      },
+                      "parameters": [
+                        "PlayerId"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "expressionType": {
+                "type": "expression"
+              },
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "Sprite",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "MultiplayerArrowShooter::ArrowBehavior",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "ActionWithOperator",
+              "getterName": "PlayerId",
+              "name": "SetPlayerId",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "PlayerId",
+                        "=",
+                        "Value"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "Sprite",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "MultiplayerArrowShooter::ArrowBehavior",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
             }
           ],
           "propertyDescriptors": [
@@ -27229,6 +27091,13 @@
               ],
               "choices": [],
               "name": "PhysicsBehavior"
+            },
+            {
+              "value": "",
+              "type": "Number",
+              "label": "",
+              "hidden": true,
+              "name": "PlayerId"
             }
           ],
           "sharedPropertyDescriptors": []
