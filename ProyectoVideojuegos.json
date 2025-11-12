@@ -12280,6 +12280,32 @@
                       "actions": [],
                       "events": [
                         {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AdvancedJump::HorizontalDash::IsDashing"
+                              },
+                              "parameters": [
+                                "Player",
+                                "HorizontalDash",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "Arrow",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
                           "type": "BuiltinCommonInstructions::Comment",
                           "color": {
                             "b": 109,
@@ -25677,17 +25703,6 @@
                                     "\"X\"",
                                     ""
                                   ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Gamepads::C_Button_pressed"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "PlayerId",
-                                    "\"Left\"",
-                                    ""
-                                  ]
                                 }
                               ]
                             },
@@ -25742,17 +25757,6 @@
                                     "",
                                     "PlayerId",
                                     "\"X\"",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Gamepads::C_Button_released"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "PlayerId",
-                                    "\"Left\"",
                                     ""
                                   ]
                                 }
@@ -25877,14 +25881,305 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Axis_pushed"
+                          },
+                          "parameters": [
+                            "",
+                            "PlayerId",
+                            "\"Left\"",
+                            "\"Any\"",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "AimingAngle",
+                            "=",
+                            "Gamepads::StickAngle(PlayerId, \"Left\")"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "D-pad"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "PlayerId",
+                            "\"Right\"",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "AimingAngle",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "PlayerId",
+                            "\"Left\"",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "AimingAngle",
+                            "=",
+                            "180"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "PlayerId",
+                            "\"Down\"",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "AimingAngle",
+                            "=",
+                            "90"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "Gamepads::C_Button_pressed"
+                              },
+                              "parameters": [
+                                "",
+                                "PlayerId",
+                                "\"Right\"",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "AimingAngle",
+                                "=",
+                                "45"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "Gamepads::C_Button_pressed"
+                              },
+                              "parameters": [
+                                "",
+                                "PlayerId",
+                                "\"Left\"",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "AimingAngle",
+                                "=",
+                                "135"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "PlayerId",
+                            "\"Up\"",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "AimingAngle",
+                            "=",
+                            "270"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "Gamepads::C_Button_pressed"
+                              },
+                              "parameters": [
+                                "",
+                                "PlayerId",
+                                "\"Right\"",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "AimingAngle",
+                                "=",
+                                "315"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "Gamepads::C_Button_pressed"
+                              },
+                              "parameters": [
+                                "",
+                                "PlayerId",
+                                "\"Left\"",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "AimingAngle",
+                                "=",
+                                "225"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ],
                   "parameters": []
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": []
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AdvancedJump::HorizontalDash::IsDashing"
+                      },
+                      "parameters": [
+                        "Object",
+                        "HorizontalDashBehavior",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "State",
+                        "=",
+                        "\"Idle\""
+                      ]
+                    }
+                  ]
                 }
               ],
               "parameters": [
@@ -26524,7 +26819,18 @@
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
-                  "actions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Object",
+                        "PhysicsBehavior",
+                        "no"
+                      ]
+                    }
+                  ]
                 }
               ],
               "parameters": [
@@ -26622,6 +26928,16 @@
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Object",
+                        "PhysicsBehavior",
+                        "yes"
+                      ]
+                    },
                     {
                       "type": {
                         "value": "Physics2::SetDynamic"
