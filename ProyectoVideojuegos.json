@@ -11228,6 +11228,16 @@
                         },
                         {
                           "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "ArrowBar",
+                            "=",
+                            "10"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "LinkedObjects::LinkObjects"
                           },
                           "parameters": [
@@ -11647,6 +11657,16 @@
                         "Player.X()",
                         "Player.Y()-10",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "Arrow",
+                        "=",
+                        "10"
                       ]
                     },
                     {
@@ -32382,7 +32402,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.8700232859857332,
+        "zoomFactor": 0.4789341884535268,
         "windowMask": false,
         "selectedLayer": ""
       }
