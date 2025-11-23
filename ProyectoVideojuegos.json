@@ -2941,7 +2941,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.5290357402156862,
+        "zoomFactor": 0.4789341884535268,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -3056,6 +3056,11 @@
           "name": "GameState",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "RemainingPlayers",
+          "type": "number",
+          "value": 1
         }
       ],
       "instances": [
@@ -3168,6 +3173,7 @@
           "keepRatio": true,
           "layer": "UI",
           "name": "Press",
+          "opacity": 0,
           "persistentUuid": "f3705afa-9727-4227-a791-1e74f0dc6f74",
           "width": 0,
           "x": 528,
@@ -3185,6 +3191,7 @@
           "keepRatio": true,
           "layer": "UI",
           "name": "A_Button",
+          "opacity": 0,
           "persistentUuid": "fc0b19a4-0c7b-4dcf-ad53-6257d870332c",
           "width": 80,
           "x": 672,
@@ -21378,10 +21385,15 @@
           "effects": [],
           "behaviors": [
             {
+              "isFolded": true,
               "name": "Sticker",
               "type": "Sticker::Sticker",
               "OnlyFollowPosition": false,
               "IsDestroyedWithParent": false
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
             }
           ],
           "animations": [
@@ -21558,7 +21570,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Setup",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -21722,6 +21733,22 @@
                   ]
                 },
                 {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "RemainingPlayers",
+                        "=",
+                        "Players"
+                      ]
+                    }
+                  ]
+                },
+                {
                   "type": "BuiltinCommonInstructions::Comment",
                   "color": {
                     "b": 109,
@@ -21846,6 +21873,34 @@
                     }
                   ],
                   "parameters": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Start the game"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "GameState",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -21865,6 +21920,306 @@
             "includeConfig": 0
           },
           "target": "ArrowEvents"
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Game Rules",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "When only one Player remains"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "GameState",
+                    "=",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Pick the winner"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MultiplayerArrowShooter::PlayerBehavior::IsAlive"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlayerBehavior",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Winner",
+                        "=",
+                        "Player.PlayerBehavior::Id()"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "PlayersWins[Winner]",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Show the ScoreUI"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "ScoreIcon",
+                        "Id",
+                        "=",
+                        "Winner"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                      },
+                      "parameters": [
+                        "ResultBg",
+                        "Tween",
+                        "\"show_UI\"",
+                        "ResultBg.X()",
+                        "0",
+                        "\"linear\"",
+                        "0.5",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "1.8"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "ScoreIcon",
+                        "Animation",
+                        "=",
+                        "\"Run\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                      },
+                      "parameters": [
+                        "ScoreIcon",
+                        "Tween",
+                        "\"move_scoreUI\"",
+                        "ScoreIcon.X() + 920/WinsNeeded",
+                        "ScoreIcon.Y()",
+                        "\"linear\"",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "ScoreIcon",
+                        "Animation",
+                        "=",
+                        "\"Idle\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.2"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Player wins"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "PlayersWins[Winner]",
+                            "=",
+                            "WinsNeeded"
+                          ]
+                        }
+                      ],
+                      "actions": []
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Else, the game continues"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "PressA",
+                            "Tween",
+                            "\"show_press_A\"",
+                            "255",
+                            "\"linear\"",
+                            "0.3",
+                            "no"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.3"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "GameState",
+                            "=",
+                            "3"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
         }
       ],
       "layers": [
@@ -22102,7 +22457,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.4481978045410386,
+        "zoomFactor": 0.8416428125373157,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -22229,6 +22584,7 @@
           ]
         },
         {
+          "folded": true,
           "name": "PlayerConnected",
           "type": "array",
           "children": [
@@ -29978,6 +30334,7 @@
       },
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -30213,233 +30570,26 @@
           ]
         },
         {
-          "folded": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "StringVariable"
-              },
-              "parameters": [
-                "Screen",
-                "=",
-                "\"Main\""
-              ]
-            }
-          ],
-          "actions": [],
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Main Screen",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::Or"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Up\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Gamepads::C_Button_pressed"
-                      },
-                      "parameters": [
-                        "",
-                        "1",
-                        "\"Up\"",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Gamepads::C_Axis_pushed"
-                      },
-                      "parameters": [
-                        "",
-                        "1",
-                        "\"Left\"",
-                        "\"Up\"",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberVariable"
+                    "value": "StringVariable"
                   },
                   "parameters": [
-                    "Selection",
-                    ">",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "Selection",
-                    "-",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "ArrowSelector",
+                    "Screen",
                     "=",
-                    "ArrowPositions[Selection].X",
-                    "=",
-                    "ArrowPositions[Selection].Y"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Or"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Down\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Gamepads::C_Button_pressed"
-                      },
-                      "parameters": [
-                        "",
-                        "1",
-                        "\"Down\"",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Gamepads::C_Axis_pushed"
-                      },
-                      "parameters": [
-                        "",
-                        "1",
-                        "\"Left\"",
-                        "\"Down\"",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberVariable"
-                  },
-                  "parameters": [
-                    "Selection",
-                    "<",
-                    "2"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "Selection",
-                    "+",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "ArrowSelector",
-                    "=",
-                    "ArrowPositions[Selection].X",
-                    "=",
-                    "ArrowPositions[Selection].Y"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Option selected"
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Or"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "value": "KeyFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Space\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Gamepads::C_Button_pressed"
-                      },
-                      "parameters": [
-                        "",
-                        "1",
-                        "\"A\"",
-                        ""
-                      ]
-                    }
+                    "\"Main\""
                   ]
                 }
               ],
@@ -30450,30 +30600,432 @@
                   "conditions": [
                     {
                       "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Up\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "\"Up\"",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Axis_pushed"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "\"Left\"",
+                            "\"Up\"",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "NumberVariable"
                       },
                       "parameters": [
                         "Selection",
-                        "=",
+                        ">",
                         "0"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                        "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "MainOptions",
-                        "Tween",
-                        "\"fade_out\"",
-                        "0",
-                        "\"linear\"",
-                        "0.2",
-                        "no"
+                        "Selection",
+                        "-",
+                        "1"
                       ]
                     },
+                    {
+                      "type": {
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "ArrowSelector",
+                        "=",
+                        "ArrowPositions[Selection].X",
+                        "=",
+                        "ArrowPositions[Selection].Y"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Down\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "\"Down\"",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Axis_pushed"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "\"Left\"",
+                            "\"Down\"",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Selection",
+                        "<",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Selection",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "ArrowSelector",
+                        "=",
+                        "ArrowPositions[Selection].X",
+                        "=",
+                        "ArrowPositions[Selection].Y"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Option selected"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Space\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "\"A\"",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Selection",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "MainOptions",
+                            "Tween",
+                            "\"fade_out\"",
+                            "0",
+                            "\"linear\"",
+                            "0.2",
+                            "no"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
+                          },
+                          "parameters": [
+                            "PlayBackground",
+                            "Tween",
+                            "\"bg_in\"",
+                            "0",
+                            "\"linear\"",
+                            "0.4",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "Screen",
+                            "=",
+                            "\"Waiting\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "Screen",
+                            "=",
+                            "\"Play\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Selection",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": []
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Selection",
+                            "=",
+                            "2"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Quit"
+                          },
+                          "parameters": [
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Controls Screen",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "Screen",
+                    "=",
+                    "\"Controls\""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Play Screen",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringVariable"
+                  },
+                  "parameters": [
+                    "Screen",
+                    "=",
+                    "\"Play\""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Escape\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "\"B\"",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
                     {
                       "type": {
                         "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
@@ -30481,8 +31033,8 @@
                       "parameters": [
                         "PlayBackground",
                         "Tween",
-                        "\"bg_in\"",
-                        "0",
+                        "\"bg_out\"",
+                        "1280",
                         "\"linear\"",
                         "0.4",
                         ""
@@ -30503,7 +31055,29 @@
                         "value": "Wait"
                       },
                       "parameters": [
-                        "0.5"
+                        "0.3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "MainOptions",
+                        "Tween",
+                        "\"fade_in\"",
+                        "255",
+                        "\"linear\"",
+                        "0.2",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.2"
                       ]
                     },
                     {
@@ -30513,7 +31087,7 @@
                       "parameters": [
                         "Screen",
                         "=",
-                        "\"Play\""
+                        "\"Main\""
                       ]
                     }
                   ]
@@ -30523,101 +31097,94 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "NumberVariable"
+                        "value": "BooleanVariable"
                       },
                       "parameters": [
-                        "Selection",
-                        "=",
-                        "1"
+                        "IsPlayerConnected[2]",
+                        "False",
+                        ""
                       ]
-                    }
-                  ],
-                  "actions": []
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
+                    },
                     {
                       "type": {
-                        "value": "NumberVariable"
+                        "value": "Gamepads::C_Button_pressed"
                       },
                       "parameters": [
-                        "Selection",
+                        "",
+                        "2",
+                        "\"A\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "JoinGroup",
+                        "PlayerId",
                         "=",
                         "2"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "Quit"
+                        "value": "SetBooleanVariable"
                       },
                       "parameters": [
+                        "IsPlayerConnected[2]",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Players",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "JoinGroup"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "Player2",
                         ""
                       ]
                     }
                   ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "StringVariable"
-              },
-              "parameters": [
-                "Screen",
-                "=",
-                "\"Controls\""
-              ]
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "StringVariable"
-              },
-              "parameters": [
-                "Screen",
-                "=",
-                "\"Play\""
-              ]
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+                },
                 {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Or"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
                     {
                       "type": {
-                        "value": "KeyFromTextPressed"
+                        "value": "BooleanVariable"
                       },
                       "parameters": [
-                        "",
-                        "\"Escape\""
+                        "IsPlayerConnected[3]",
+                        "False",
+                        ""
                       ]
                     },
                     {
@@ -30626,325 +31193,80 @@
                       },
                       "parameters": [
                         "",
-                        "1",
-                        "\"B\"",
+                        "3",
+                        "\"A\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "JoinGroup",
+                        "PlayerId",
+                        "=",
+                        "3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "IsPlayerConnected[3]",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Players",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "JoinGroup"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "Player3",
                         ""
                       ]
                     }
                   ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
-                  },
-                  "parameters": [
-                    "PlayBackground",
-                    "Tween",
-                    "\"bg_out\"",
-                    "1280",
-                    "\"linear\"",
-                    "0.4",
-                    ""
-                  ]
                 },
                 {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "Screen",
-                    "=",
-                    "\"Waiting\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Wait"
-                  },
-                  "parameters": [
-                    "0.3"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                  },
-                  "parameters": [
-                    "MainOptions",
-                    "Tween",
-                    "\"fade_in\"",
-                    "255",
-                    "\"linear\"",
-                    "0.2",
-                    "no"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Wait"
-                  },
-                  "parameters": [
-                    "0.2"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "Screen",
-                    "=",
-                    "\"Main\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "IsPlayerConnected[2]",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Gamepads::C_Button_pressed"
-                  },
-                  "parameters": [
-                    "",
-                    "2",
-                    "\"A\"",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "JoinGroup",
-                    "PlayerId",
-                    "=",
-                    "2"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetBooleanVariable"
-                  },
-                  "parameters": [
-                    "IsPlayerConnected[2]",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "JoinGroup"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Montre"
-                  },
-                  "parameters": [
-                    "Player2",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "IsPlayerConnected[3]",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Gamepads::C_Button_pressed"
-                  },
-                  "parameters": [
-                    "",
-                    "3",
-                    "\"A\"",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "JoinGroup",
-                    "PlayerId",
-                    "=",
-                    "3"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetBooleanVariable"
-                  },
-                  "parameters": [
-                    "IsPlayerConnected[3]",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "JoinGroup"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Montre"
-                  },
-                  "parameters": [
-                    "Player3",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "IsPlayerConnected[4]",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Gamepads::C_Button_pressed"
-                  },
-                  "parameters": [
-                    "",
-                    "4",
-                    "\"A\"",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "JoinGroup",
-                    "PlayerId",
-                    "=",
-                    "4"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetBooleanVariable"
-                  },
-                  "parameters": [
-                    "IsPlayerConnected[4]",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "JoinGroup"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Montre"
-                  },
-                  "parameters": [
-                    "Player4",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Start the game"
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Or"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
                     {
                       "type": {
-                        "value": "KeyFromTextPressed"
+                        "value": "BooleanVariable"
                       },
                       "parameters": [
-                        "",
-                        "\"Return\""
+                        "IsPlayerConnected[4]",
+                        "False",
+                        ""
                       ]
                     },
                     {
@@ -30953,34 +31275,136 @@
                       },
                       "parameters": [
                         "",
-                        "1",
-                        "\"Start\"",
+                        "4",
+                        "\"A\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "JoinGroup",
+                        "PlayerId",
+                        "=",
+                        "4"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "IsPlayerConnected[4]",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Players",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "JoinGroup"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "Player4",
                         ""
                       ]
                     }
                   ]
                 },
                 {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
                   },
-                  "parameters": []
-                }
-              ],
-              "actions": [
+                  "comment": "Start the game"
+                },
                 {
-                  "type": {
-                    "value": "Scene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Game Scene\"",
-                    ""
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Return\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "\"Start\"",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Scene"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Game Scene\"",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         }
       ],
       "layers": [
@@ -31183,74 +31607,38 @@
       "name": "ArrowEvents",
       "events": [
         {
-          "type": "BuiltinCommonInstructions::ForEach",
-          "object": "Player",
-          "conditions": [],
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "1"
+              ]
+            }
+          ],
           "actions": [],
           "events": [
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "MultiplayerArrowShooter::PlayerBehavior::IsAlive"
-                  },
-                  "parameters": [
-                    "Player",
-                    "PlayerBehavior",
-                    ""
-                  ]
-                }
-              ],
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Player",
+              "conditions": [],
               "actions": [],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Pick up arrows"
-                },
-                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "Distance"
-                      },
-                      "parameters": [
-                        "Player",
-                        "Arrow",
-                        "32",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "MultiplayerArrowShooter::ArrowBehavior::State"
-                      },
-                      "parameters": [
-                        "Arrow",
-                        "ArrowBehavior",
-                        "=",
-                        "\"Stopped\"",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "MultiplayerArrowShooter::PlayerBehavior::RemainingArrows"
+                        "value": "MultiplayerArrowShooter::PlayerBehavior::IsAlive"
                       },
                       "parameters": [
                         "Player",
                         "PlayerBehavior",
-                        "<",
-                        "3",
                         ""
                       ]
                     }
@@ -31258,150 +31646,31 @@
                   "actions": [],
                   "events": [
                     {
-                      "type": "BuiltinCommonInstructions::ForEach",
-                      "object": "Arrow",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Delete"
-                          },
-                          "parameters": [
-                            "Arrow",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "MultiplayerArrowShooter::PlayerBehavior::SetRemainingArrows"
-                          },
-                          "parameters": [
-                            "Player",
-                            "PlayerBehavior",
-                            "+",
-                            "1",
-                            ""
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Creating the arrow"
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "MultiplayerArrowShooter::PlayerBehavior::State"
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
                       },
-                      "parameters": [
-                        "Player",
-                        "PlayerBehavior",
-                        "=",
-                        "\"Aiming\"",
-                        ""
-                      ]
+                      "comment": "Pick up arrows"
                     },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "CreateByName"
-                      },
-                      "parameters": [
-                        "",
-                        "Arrow",
-                        "\"NormalArrow\"",
-                        "Player.X()",
-                        "Player.Y()-10",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ChangePlan"
-                      },
-                      "parameters": [
-                        "Arrow",
-                        "=",
-                        "10"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "LinkedObjects::LinkObjects"
-                      },
-                      "parameters": [
-                        "",
-                        "Player",
-                        "Arrow"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "MultiplayerArrowShooter::ArrowBehavior::SetPlayerId"
-                      },
-                      "parameters": [
-                        "Arrow",
-                        "ArrowBehavior",
-                        "=",
-                        "Player.PlayerBehavior::Id()",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Handling the arrow created"
-                },
-                {
-                  "folded": true,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "LinkedObjects::PickObjectsLinkedTo"
-                      },
-                      "parameters": [
-                        "",
-                        "Arrow",
-                        "Player",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [],
-                  "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
+                        {
+                          "type": {
+                            "value": "Distance"
+                          },
+                          "parameters": [
+                            "Player",
+                            "Arrow",
+                            "32",
+                            ""
+                          ]
+                        },
                         {
                           "type": {
                             "value": "MultiplayerArrowShooter::ArrowBehavior::State"
@@ -31410,7 +31679,161 @@
                             "Arrow",
                             "ArrowBehavior",
                             "=",
-                            "\"Ready\"",
+                            "\"Stopped\"",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MultiplayerArrowShooter::PlayerBehavior::RemainingArrows"
+                          },
+                          "parameters": [
+                            "Player",
+                            "PlayerBehavior",
+                            "<",
+                            "3",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Arrow",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "Arrow",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "MultiplayerArrowShooter::PlayerBehavior::SetRemainingArrows"
+                              },
+                              "parameters": [
+                                "Player",
+                                "PlayerBehavior",
+                                "+",
+                                "1",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Creating the arrow"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "MultiplayerArrowShooter::PlayerBehavior::State"
+                          },
+                          "parameters": [
+                            "Player",
+                            "PlayerBehavior",
+                            "=",
+                            "\"Aiming\"",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "CreateByName"
+                          },
+                          "parameters": [
+                            "",
+                            "Arrow",
+                            "\"NormalArrow\"",
+                            "Player.X()",
+                            "Player.Y()-10",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "Arrow",
+                            "=",
+                            "10"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "LinkedObjects::LinkObjects"
+                          },
+                          "parameters": [
+                            "",
+                            "Player",
+                            "Arrow"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MultiplayerArrowShooter::ArrowBehavior::SetPlayerId"
+                          },
+                          "parameters": [
+                            "Arrow",
+                            "ArrowBehavior",
+                            "=",
+                            "Player.PlayerBehavior::Id()",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Handling the arrow created"
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "LinkedObjects::PickObjectsLinkedTo"
+                          },
+                          "parameters": [
+                            "",
+                            "Arrow",
+                            "Player",
                             ""
                           ]
                         }
@@ -31422,219 +31845,290 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "AdvancedJump::HorizontalDash::IsDashing"
-                              },
-                              "parameters": [
-                                "Player",
-                                "HorizontalDash",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Delete"
-                              },
-                              "parameters": [
-                                "Arrow",
-                                ""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Comment",
-                          "color": {
-                            "b": 109,
-                            "g": 230,
-                            "r": 255,
-                            "textB": 0,
-                            "textG": 0,
-                            "textR": 0
-                          },
-                          "comment": "Rotate"
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "MultiplayerArrowShooter::PlayerBehavior::State"
-                              },
-                              "parameters": [
-                                "Player",
-                                "PlayerBehavior",
-                                "=",
-                                "\"Aiming\"",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "MettreXY"
-                              },
-                              "parameters": [
-                                "Arrow",
-                                "=",
-                                "Player.X()",
-                                "=",
-                                "Player.Y()-10"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetAngle"
-                              },
-                              "parameters": [
-                                "Arrow",
-                                "=",
-                                "Player.PlayerBehavior::AimingAngle()"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Comment",
-                          "color": {
-                            "b": 109,
-                            "g": 230,
-                            "r": 255,
-                            "textB": 0,
-                            "textG": 0,
-                            "textR": 0
-                          },
-                          "comment": "Fire"
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "MultiplayerArrowShooter::PlayerBehavior::State"
-                              },
-                              "parameters": [
-                                "Player",
-                                "PlayerBehavior",
-                                "=",
-                                "\"FiringArrow\"",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Once"
-                              },
-                              "parameters": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "MultiplayerArrowShooter::PlayerBehavior::SetState"
-                              },
-                              "parameters": [
-                                "Player",
-                                "PlayerBehavior",
-                                "=",
-                                "\"Idle\"",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "MultiplayerArrowShooter::ArrowBehavior::Fire"
+                                "value": "MultiplayerArrowShooter::ArrowBehavior::State"
                               },
                               "parameters": [
                                 "Arrow",
                                 "ArrowBehavior",
+                                "=",
+                                "\"Ready\"",
                                 ""
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "AdvancedJump::HorizontalDash::IsDashing"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "HorizontalDash",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Delete"
+                                  },
+                                  "parameters": [
+                                    "Arrow",
+                                    ""
+                                  ]
+                                }
                               ]
                             },
                             {
-                              "type": {
-                                "value": "MultiplayerArrowShooter::PlayerBehavior::SetRemainingArrows"
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
                               },
-                              "parameters": [
-                                "Player",
-                                "PlayerBehavior",
-                                "-",
-                                "1",
-                                ""
+                              "comment": "Rotate"
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "MultiplayerArrowShooter::PlayerBehavior::State"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "PlayerBehavior",
+                                    "=",
+                                    "\"Aiming\"",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "MettreXY"
+                                  },
+                                  "parameters": [
+                                    "Arrow",
+                                    "=",
+                                    "Player.X()",
+                                    "=",
+                                    "Player.Y()-10"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetAngle"
+                                  },
+                                  "parameters": [
+                                    "Arrow",
+                                    "=",
+                                    "Player.PlayerBehavior::AimingAngle()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Fire"
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "MultiplayerArrowShooter::PlayerBehavior::State"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "PlayerBehavior",
+                                    "=",
+                                    "\"FiringArrow\"",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "MultiplayerArrowShooter::PlayerBehavior::SetState"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "PlayerBehavior",
+                                    "=",
+                                    "\"Idle\"",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "MultiplayerArrowShooter::ArrowBehavior::Fire"
+                                  },
+                                  "parameters": [
+                                    "Arrow",
+                                    "ArrowBehavior",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "MultiplayerArrowShooter::PlayerBehavior::SetRemainingArrows"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "PlayerBehavior",
+                                    "-",
+                                    "1",
+                                    ""
+                                  ]
+                                }
                               ]
                             }
                           ]
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Handle death"
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "Player",
-                        "Arrow",
-                        "",
-                        "",
-                        ""
-                      ]
                     },
                     {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::Name"
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
                       },
-                      "parameters": [
-                        "Arrow",
-                        "Animation",
-                        "=",
-                        "\"Launched\""
-                      ]
+                      "comment": "Handle death"
                     },
                     {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "Arrow.ArrowBehavior::PlayerId()",
-                        "!=",
-                        "Player.PlayerBehavior::Id()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "MultiplayerArrowShooter::PlayerBehavior::Die"
-                      },
-                      "parameters": [
-                        "Player",
-                        "PlayerBehavior",
-                        ""
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "Player",
+                            "Arrow",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::Name"
+                          },
+                          "parameters": [
+                            "Arrow",
+                            "Animation",
+                            "=",
+                            "\"Launched\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "Arrow.ArrowBehavior::PlayerId()",
+                            "!=",
+                            "Player.PlayerBehavior::Id()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "MultiplayerArrowShooter::PlayerBehavior::Die"
+                          },
+                          "parameters": [
+                            "Player",
+                            "PlayerBehavior",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "RemainingPlayers",
+                            "-",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Check if there is only one Player remaining"
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "RemainingPlayers",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "GameState",
+                                "=",
+                                "2"
+                              ]
+                            }
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -45454,22 +45948,22 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "SetStringVariable"
-                      },
-                      "parameters": [
-                        "State",
-                        "=",
-                        "\"Idle\""
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "SetBooleanVariable"
                       },
                       "parameters": [
                         "IsAlive",
                         "False",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "State",
+                        "=",
+                        "\"Idle\""
                       ]
                     },
                     {
