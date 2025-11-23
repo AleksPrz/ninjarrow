@@ -2588,14 +2588,6 @@
         }
       },
       {
-        "file": "assets/actual assets/MenuBackground.jpg",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\actual assets\\MenuBackground.jpg",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
         "file": "assets/actual assets/MainMenuBackground.jpg",
         "kind": "image",
         "metadata": "",
@@ -2651,14 +2643,6 @@
         }
       },
       {
-        "file": "assets/NewPanelSprite.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
-        "name": "NewPanelSprite",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
         "file": "assets/NewPanelSprite2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
@@ -2678,68 +2662,12 @@
         }
       },
       {
-        "file": "assets/actual assets/Arrow.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\actual assets\\Arrow.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
         "file": "assets/actual assets/ArrowSelector.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\actual assets\\ArrowSelector.png",
         "smoothed": true,
         "userAdded": false
-      },
-      {
-        "file": "assets/Fire Burning_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Fire Burning_1.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/GrafxKid Pack/Character Pack 3/Effect/809f085c48c82d513aeb1f8813718b20bcf01d23054d434940c0936d23f51a07_Fire Burning_1.png",
-          "name": "Fire Burning_1.png"
-        }
-      },
-      {
-        "file": "assets/Fire Burning_2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Fire Burning_2.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/GrafxKid Pack/Character Pack 3/Effect/c985c99af2b3f422ddb07dea0850d698fc69a64317bd1677dce6f38fbbe9f5ac_Fire Burning_2.png",
-          "name": "Fire Burning_2.png"
-        }
-      },
-      {
-        "file": "assets/Fire Burning_3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Fire Burning_3.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/GrafxKid Pack/Character Pack 3/Effect/4c61d3e32b18bc45e1d3af39133ad76ded0a1fb663b80e18e63812e1c5d0540a_Fire Burning_3.png",
-          "name": "Fire Burning_3.png"
-        }
-      },
-      {
-        "file": "assets/Fire Burning_4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Fire Burning_4.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/GrafxKid Pack/Character Pack 3/Effect/0511b341f82513388f408f7b355a8e87161e139b830aca57972071cda05c457c_Fire Burning_4.png",
-          "name": "Fire Burning_4.png"
-        }
       },
       {
         "file": "assets/Fireball_Projectile_1.png",
@@ -2778,30 +2706,10 @@
         }
       },
       {
-        "file": "assets/Layout A.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Layout A.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Controller And Input Icons/Button/Button/x128/Layout Dark/822a2a0e0a645f312c2ee6566305705af93585d38481cb90ebef3b1f72355315_Layout A.png",
-          "name": "Layout A.png"
-        }
-      },
-      {
         "file": "assets/actual assets/circle.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\actual assets\\circle.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/actual assets/circle16.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\actual assets\\circle16.png",
         "smoothed": true,
         "userAdded": false
       },
@@ -2838,6 +2746,118 @@
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
         "name": "NewPanelSprite4",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/assets_actual assets_Background_Brown.png5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "assets\\actual assets\\Background\\Brown.png5",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/assets_actual assets_Background_Blue.png6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "assets\\actual assets\\Background\\Blue.png6",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/Background/Gray_.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\actual assets\\Background\\Gray_.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/assets_actual assets_Background_Green.png2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "assets\\actual assets\\Background\\Green.png2",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/assets_actual assets_Background_Purple.png2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "assets\\actual assets\\Background\\Purple.png2",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/Background/Pink_.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\actual assets\\Background\\Pink_.jpg",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/assets_actual assets_Background_Pink_.jpg2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "assets\\actual assets\\Background\\Pink_.jpg2",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/assets_actual assets_Background_Pink_.jpg3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "assets\\actual assets\\Background\\Pink_.jpg3",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/Background/Pink_1.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\actual assets\\Background\\Pink_1.jpg",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/assets_actual assets_Background_Pink_1.jpg2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "assets\\actual assets\\Background\\Pink_1.jpg2",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/Background/Yellow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\actual assets\\Background\\Yellow.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/assets_actual assets_Background_Yellow.png2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "assets\\actual assets\\Background\\Yellow.png2",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/assets_actual assets_Background_Yellow.png3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "assets\\actual assets\\Background\\Yellow.png3",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/assets_actual assets_Background_Yellow.png4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "assets\\actual assets\\Background\\Yellow.png4",
         "smoothed": true,
         "userAdded": false
       }
@@ -2941,7 +2961,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.4789341884535268,
+        "zoomFactor": 0.6455105703311509,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -3042,6 +3062,32 @@
             },
             {
               "name": "A_Button"
+            }
+          ]
+        },
+        {
+          "name": "Background",
+          "objects": [
+            {
+              "name": "Bg1"
+            },
+            {
+              "name": "Bg2"
+            },
+            {
+              "name": "Bg3"
+            },
+            {
+              "name": "Bg4"
+            },
+            {
+              "name": "Bg5"
+            },
+            {
+              "name": "Bg6"
+            },
+            {
+              "name": "Bg0"
             }
           ]
         }
@@ -21446,6 +21492,83 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 720,
+          "name": "Bg1",
+          "texture": "assets\\actual assets\\Background\\Blue.png6",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 1280,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 720,
+          "name": "Bg2",
+          "texture": "assets\\actual assets\\Background\\Brown.png5",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 1280,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 720,
+          "name": "Bg3",
+          "texture": "assets\\actual assets\\Background\\Gray_.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 1280,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 720,
+          "name": "Bg4",
+          "texture": "assets\\actual assets\\Background\\Green.png2",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 1280,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 720,
+          "name": "Bg5",
+          "texture": "assets\\actual assets\\Background\\Purple.png2",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 1280,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 720,
+          "name": "Bg6",
+          "texture": "assets\\actual assets\\Background\\Pink_1.jpg2",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 1280,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 720,
+          "name": "Bg0",
+          "texture": "assets\\actual assets\\Background\\Yellow.png4",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 1280,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
@@ -21556,6 +21679,32 @@
           },
           {
             "objectName": "ResultBg"
+          },
+          {
+            "folderName": "Backgrounds",
+            "children": [
+              {
+                "objectName": "Bg6"
+              },
+              {
+                "objectName": "Bg5"
+              },
+              {
+                "objectName": "Bg4"
+              },
+              {
+                "objectName": "Bg3"
+              },
+              {
+                "objectName": "Bg2"
+              },
+              {
+                "objectName": "Bg1"
+              },
+              {
+                "objectName": "Bg0"
+              }
+            ]
           }
         ]
       },
@@ -21634,6 +21783,37 @@
                     "textG": 0,
                     "textR": 0
                   },
+                  "comment": "Create the background"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "CreateByName"
+                      },
+                      "parameters": [
+                        "",
+                        "Background",
+                        "\"Bg\" + ToString(Random(6))",
+                        "0",
+                        "0",
+                        "\"Background\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
                   "comment": "Create stage"
                 },
                 {
@@ -21646,7 +21826,7 @@
                       },
                       "parameters": [
                         "",
-                        "\"Stage4\"",
+                        "\"Stage\" + ToString(RandomInRange(1,5))",
                         "0",
                         "0",
                         "0"
@@ -21847,26 +22027,60 @@
                     {
                       "type": "BuiltinCommonInstructions::ForEach",
                       "object": "ScoreIcon",
-                      "conditions": [
+                      "conditions": [],
+                      "actions": [],
+                      "events": [
                         {
-                          "type": {
-                            "value": "BooleanVariable"
-                          },
-                          "parameters": [
-                            "IsPlayerConnected[ScoreIcon.Id]",
-                            "=",
-                            ""
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "IsPlayerConnected[ScoreIcon.Id]",
+                                "=",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "ScoreIcon",
+                                ""
+                              ]
+                            }
                           ]
-                        }
-                      ],
-                      "actions": [
+                        },
                         {
-                          "type": {
-                            "value": "Delete"
-                          },
-                          "parameters": [
-                            "ScoreIcon",
-                            ""
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "IsPlayerConnected[ScoreIcon.Id]",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "MettreX"
+                              },
+                              "parameters": [
+                                "ScoreIcon",
+                                "+",
+                                "(920/WinsNeeded) * PlayersWins[ScoreIcon.Id]"
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -21926,8 +22140,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
-          "name": "Game Rules",
+          "name": "Score Screen",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -22217,12 +22430,148 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "GameState",
+                    "=",
+                    "3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Space\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Gamepads::C_Button_pressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Winner",
+                        "\"A\"",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Game Scene\"",
+                    ""
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Move the background horizontally"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TiledSpriteObject::YOffset"
+              },
+              "parameters": [
+                "Background",
+                "-",
+                "20*TimeDelta()"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Background",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        },
         {
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
@@ -22457,7 +22806,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.8416428125373157,
+        "zoomFactor": 0.6897782140104541,
         "windowMask": false,
         "selectedLayer": ""
       },
