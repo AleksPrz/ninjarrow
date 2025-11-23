@@ -588,30 +588,6 @@
         }
       },
       {
-        "file": "assets/Flat Heart Empty.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Flat Heart Empty.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/c0bac0102b6467c3f428f093a162ad8aedc069b2bf3cbe65f344353c3695ecdf_Flat Heart Empty.png",
-          "name": "Flat Heart Empty.png"
-        }
-      },
-      {
-        "file": "assets/Flat Heart Filled.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Flat Heart Filled.png",
-        "smoothed": true,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/4158f811cf0bb821a58f98d8cb78f2257ee590210091ab56b46703e94044ee7a_Flat Heart Filled.png",
-          "name": "Flat Heart Filled.png"
-        }
-      },
-      {
         "file": "assets/New image3.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"pskl\":{},\"localFilePath\":\"assets/New image3.png\"}",
@@ -2790,66 +2766,10 @@
         "userAdded": false
       },
       {
-        "file": "assets/actual assets/Background/Pink_.jpg",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\actual assets\\Background\\Pink_.jpg",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/assets_actual assets_Background_Pink_.jpg2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
-        "name": "assets\\actual assets\\Background\\Pink_.jpg2",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/assets_actual assets_Background_Pink_.jpg3.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
-        "name": "assets\\actual assets\\Background\\Pink_.jpg3",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/actual assets/Background/Pink_1.jpg",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\actual assets\\Background\\Pink_1.jpg",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
         "file": "assets/assets_actual assets_Background_Pink_1.jpg2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
         "name": "assets\\actual assets\\Background\\Pink_1.jpg2",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/actual assets/Background/Yellow.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\actual assets\\Background\\Yellow.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/assets_actual assets_Background_Yellow.png2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
-        "name": "assets\\actual assets\\Background\\Yellow.png2",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/assets_actual assets_Background_Yellow.png3.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
-        "name": "assets\\actual assets\\Background\\Yellow.png3",
         "smoothed": true,
         "userAdded": false
       },
@@ -3001,7 +2921,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.4481978045410377,
+        "zoomFactor": 0.5653158055126334,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -21625,6 +21545,61 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Go",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Sticker",
+              "type": "Sticker::Sticker",
+              "OnlyFollowPosition": false,
+              "IsDestroyedWithParent": false
+            },
+            {
+              "isFolded": true,
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "string": "Go!",
+          "font": "45bf060c897266594bc78a4b12350be50bbc315510afc75ff4336b62228e68dc_MPLUS1p-Black.ttf",
+          "textAlignment": "left",
+          "characterSize": 54,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "0;0;0",
+            "outlineThickness": 4,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 255,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Go!",
+            "font": "45bf060c897266594bc78a4b12350be50bbc315510afc75ff4336b62228e68dc_MPLUS1p-Black.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 54,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -21727,6 +21702,9 @@
               },
               {
                 "objectName": "Press"
+              },
+              {
+                "objectName": "Go"
               },
               {
                 "objectName": "A_Button"
@@ -22198,7 +22176,42 @@
                         "value": "Wait"
                       },
                       "parameters": [
-                        "1"
+                        "0.6"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Go",
+                        "1296",
+                        "242",
+                        "\"UI\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                      },
+                      "parameters": [
+                        "Go",
+                        "Tween",
+                        "\"show_go\"",
+                        "542",
+                        "Go.Y()",
+                        "\"linear\"",
+                        "0.25",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.5"
                       ]
                     },
                     {
@@ -22210,6 +22223,20 @@
                         "PlayerBehavior",
                         "yes",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "Go",
+                        "Tween",
+                        "\"delete_go\"",
+                        "0",
+                        "\"linear\"",
+                        "0.3",
+                        "yes"
                       ]
                     }
                   ]
@@ -22266,6 +22293,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Score Screen",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -22654,7 +22682,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Move the background horizontally"
+          "comment": "Move the background vertically"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -23018,7 +23046,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.6897782140104541,
+        "zoomFactor": 0.6244537826600031,
         "windowMask": false,
         "selectedLayer": ""
       },
