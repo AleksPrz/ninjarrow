@@ -2780,6 +2780,156 @@
         "name": "assets\\actual assets\\Background\\Yellow.png4",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/dash.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\dash.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/battle0.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\battle0.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/battle1.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\battle1.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/battle2.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\battle2.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/battle3.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\battle3.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/shoot.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\shoot.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/pick_arrow.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\pick_arrow.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/hit.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\hit.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/die.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\die.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/land.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\land.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/arrow_stopped.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\arrow_stopped.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/ui_move_arrow.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\ui_move_arrow.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/start_game.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\start_game.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/select.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\select.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/back.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\back.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2903,6 +3053,11 @@
       "name": "Winner",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "BattleMusicChosen",
+      "type": "number",
+      "value": -1
     }
   ],
   "layouts": [
@@ -2913,7 +3068,7 @@
       "name": "Game Scene",
       "r": 209,
       "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
+      "stopSoundsOnStartup": false,
       "title": "",
       "v": 209,
       "uiSettings": {
@@ -2926,7 +3081,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.1550857455159303,
+        "zoomFactor": 0.3797121001947952,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -21753,7 +21908,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Setup",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -21808,6 +21962,167 @@
                 }
               ],
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Music"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "BattleMusicChosen",
+                        "=",
+                        "-1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "BattleMusicChosen",
+                        "=",
+                        "Random(3)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "BattleMusicChosen",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlayMusicCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "assets\\actual assets\\sounds\\battle0.mp3",
+                            "0",
+                            "yes",
+                            "70",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "BattleMusicChosen",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlayMusicCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "assets\\actual assets\\sounds\\battle1.mp3",
+                            "0",
+                            "yes",
+                            "70",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "BattleMusicChosen",
+                            "=",
+                            "2"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlayMusicCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "assets\\actual assets\\sounds\\battle2.mp3",
+                            "0",
+                            "yes",
+                            "70",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "BattleMusicChosen",
+                            "=",
+                            "3"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlayMusicCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "assets\\actual assets\\sounds\\battle3.mp3",
+                            "0",
+                            "yes",
+                            "70",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
                 {
                   "type": "BuiltinCommonInstructions::Comment",
                   "color": {
@@ -22666,6 +22981,18 @@
               "actions": [
                 {
                   "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\actual assets\\sounds\\select.wav",
+                    "",
+                    "80",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "FlashTransitionPainter::FlashTransitionPainter::PaintEffect"
                   },
                   "parameters": [
@@ -23076,7 +23403,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.4194339782759089,
+        "zoomFactor": 0.6040838749988907,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -23592,7 +23919,7 @@
             {
               "name": "PlayerId",
               "type": "number",
-              "value": 3
+              "value": 4
             }
           ]
         },
@@ -23614,7 +23941,7 @@
             {
               "name": "PlayerId",
               "type": "number",
-              "value": 3
+              "value": 4
             }
           ]
         },
@@ -31214,7 +31541,6 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -31312,6 +31638,18 @@
                         "=",
                         "ArrowPositions[Selection].Y"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\actual assets\\sounds\\ui_move_arrow.wav",
+                        "",
+                        "80",
+                        ""
+                      ]
                     }
                   ]
                 },
@@ -31397,6 +31735,18 @@
                         "=",
                         "ArrowPositions[Selection].Y"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\actual assets\\sounds\\ui_move_arrow.wav",
+                        "",
+                        "80",
+                        ""
+                      ]
                     }
                   ]
                 },
@@ -31442,9 +31792,28 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
                     }
                   ],
-                  "actions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\actual assets\\sounds\\select.wav",
+                        "",
+                        "80",
+                        ""
+                      ]
+                    }
+                  ],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -31629,6 +31998,18 @@
               "actions": [],
               "events": [
                 {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Go back"
+                },
+                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -31661,6 +32042,18 @@
                     }
                   ],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\actual assets\\sounds\\back.wav",
+                        "",
+                        "80",
+                        ""
+                      ]
+                    },
                     {
                       "type": {
                         "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
@@ -31726,6 +32119,18 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Configure players controllers"
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -32026,13 +32431,33 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\actual assets\\sounds\\start_game.wav",
+                        "",
+                        "80",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.5"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "FlashTransitionPainter::FlashTransitionPainter::PaintEffect"
                       },
                       "parameters": [
                         "Transition",
                         "FlashTransitionPainter",
                         "\"0;0;0\"",
-                        "0.5",
+                        "1",
                         "\"Circular\"",
                         "\"Forward\"",
                         "",
@@ -34478,6 +34903,16 @@
                     "=",
                     "0"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "BattleMusicChosen",
+                    "=",
+                    "-1"
+                  ]
                 }
               ]
             },
@@ -34927,6 +35362,18 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\actual assets\\sounds\\back.wav",
+                        "",
+                        "80",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "Wait"
                       },
                       "parameters": [
@@ -35223,7 +35670,6 @@
           "actions": [],
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "Player",
               "conditions": [],
@@ -35322,6 +35768,18 @@
                                 "+",
                                 "1",
                                 ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "assets\\actual assets\\sounds\\pick_arrow.mp3",
+                                "1",
+                                "100",
+                                "1"
                               ]
                             }
                           ]
@@ -35423,7 +35881,6 @@
                       "comment": "Handling the arrow created"
                     },
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -35581,6 +36038,18 @@
                                     "PlayerBehavior",
                                     "=",
                                     "\"Idle\"",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PlaySound"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "assets\\actual assets\\sounds\\shoot.wav",
+                                    "1",
+                                    "80",
                                     ""
                                   ]
                                 },
@@ -35784,6 +36253,18 @@
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\actual assets\\sounds\\arrow_stopped.wav",
+                    "",
+                    "65",
+                    ""
+                  ]
+                },
                 {
                   "type": {
                     "value": "MultiplayerArrowShooter::ArrowBehavior::Stop"
@@ -48537,6 +49018,12 @@
                         "HorizontalDashBehavior",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
                     }
                   ],
                   "actions": [
@@ -48548,6 +49035,19 @@
                         "State",
                         "=",
                         "\"Idle\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\actual assets\\sounds\\dash.wav",
+                        "1",
+                        "70",
+                        "80",
+                        "1.2"
                       ]
                     }
                   ]
@@ -48959,6 +49459,17 @@
                             },
                             {
                               "type": {
+                                "inverted": true,
+                                "value": "AdvancedJump::HorizontalDash::IsDashing"
+                              },
+                              "parameters": [
+                                "Object",
+                                "HorizontalDashBehavior",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
                                 "value": "BuiltinCommonInstructions::Once"
                               },
                               "parameters": []
@@ -49137,6 +49648,17 @@
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "AdvancedJump::HorizontalDash::IsDashing"
+                              },
+                              "parameters": [
+                                "Object",
+                                "HorizontalDashBehavior",
+                                ""
+                              ]
+                            },
                             {
                               "type": {
                                 "value": "BuiltinCommonInstructions::Or"
@@ -49568,6 +50090,18 @@
                     },
                     {
                       "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\actual assets\\sounds\\hit.wav",
+                        "1",
+                        "80",
+                        "1.5"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "AnimatableCapability::AnimatableBehavior::SetName"
                       },
                       "parameters": [
@@ -49647,6 +50181,54 @@
                         ""
                       ]
                     }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Landing sound"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PlatformBehavior::IsOnFloor"
+                          },
+                          "parameters": [
+                            "Object",
+                            "PlatformerBehavior"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "assets\\actual assets\\sounds\\land.wav",
+                            "1",
+                            "100",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 },
                 {
@@ -49683,6 +50265,12 @@
                         "Object",
                         "Animation"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
                     }
                   ],
                   "actions": [
@@ -49695,6 +50283,18 @@
                         "Animation",
                         "=",
                         "\"Desappearing\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\actual assets\\sounds\\die.wav",
+                        "1",
+                        "80",
+                        "1"
                       ]
                     }
                   ]
@@ -75864,6 +76464,54 @@
           "x": 848,
           "y": 432,
           "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Player2",
+          "persistentUuid": "41e480ac-92bb-4058-9935-5c8c7470dde0",
+          "width": 0,
+          "x": 704,
+          "y": 544,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Player3",
+          "persistentUuid": "234341bf-9c36-43d4-80c4-42de3f01f1ac",
+          "width": 0,
+          "x": 704,
+          "y": 436,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Player4",
+          "persistentUuid": "0734ec7e-b30b-4c25-9a1c-6ff1287cb6fc",
+          "width": 0,
+          "x": 736,
+          "y": 436,
+          "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
