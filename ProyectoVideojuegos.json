@@ -31116,7 +31116,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.40575189059438527,
+        "zoomFactor": 0.6897782140104541,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -58229,36 +58229,6 @@
                                 "Object",
                                 "HorizontalDashBehavior",
                                 ""
-                              ]
-                            }
-                          ],
-                          "events": [
-                            {
-                              "disabled": true,
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "StringVariable"
-                                  },
-                                  "parameters": [
-                                    "State",
-                                    "=",
-                                    "\"Aiming\""
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetStringVariable"
-                                  },
-                                  "parameters": [
-                                    "State",
-                                    "=",
-                                    "\"Idle\""
-                                  ]
-                                }
                               ]
                             }
                           ]
