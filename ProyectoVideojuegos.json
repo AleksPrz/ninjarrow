@@ -2966,6 +2966,36 @@
         "name": "assets\\actual assets\\logo.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/victory_theme.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\victory_theme.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/swosh.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\swosh.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/player_added.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\player_added.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -3117,7 +3147,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.3797121001947952,
+        "zoomFactor": 0.4194339782759084,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -29723,7 +29753,7 @@
                             "assets\\actual assets\\sounds\\battle0.mp3",
                             "0",
                             "yes",
-                            "70",
+                            "65",
                             ""
                           ]
                         }
@@ -29753,7 +29783,7 @@
                             "assets\\actual assets\\sounds\\battle1.mp3",
                             "0",
                             "yes",
-                            "70",
+                            "65",
                             ""
                           ]
                         }
@@ -29783,7 +29813,7 @@
                             "assets\\actual assets\\sounds\\battle2.mp3",
                             "0",
                             "yes",
-                            "70",
+                            "65",
                             ""
                           ]
                         }
@@ -29813,7 +29843,7 @@
                             "assets\\actual assets\\sounds\\battle3.mp3",
                             "0",
                             "yes",
-                            "70",
+                            "65",
                             ""
                           ]
                         }
@@ -30223,13 +30253,25 @@
                     },
                     {
                       "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\actual assets\\sounds\\swosh.wav",
+                        "",
+                        "80",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "Tween::TweenBehavior::AddObjectPositionTween2"
                       },
                       "parameters": [
                         "Go",
                         "Tween",
                         "\"show_go\"",
-                        "542",
+                        "576",
                         "Go.Y()",
                         "\"linear\"",
                         "0.25",
@@ -39342,6 +39384,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Main Screen",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -39966,7 +40009,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Play Screen",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -40167,6 +40209,18 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\actual assets\\sounds\\player_added.wav",
+                        "",
+                        "70",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "SetBooleanVariable"
                       },
                       "parameters": [
@@ -40249,6 +40303,18 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\actual assets\\sounds\\player_added.wav",
+                        "",
+                        "70",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "SetBooleanVariable"
                       },
                       "parameters": [
@@ -40329,6 +40395,18 @@
                     }
                   ],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\actual assets\\sounds\\player_added.wav",
+                        "",
+                        "70",
+                        ""
+                      ]
+                    },
                     {
                       "type": {
                         "value": "SetBooleanVariable"
@@ -42906,6 +42984,25 @@
           "actions": [],
           "events": [
             {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\actual assets\\sounds\\victory_theme.mp3",
+                    "0",
+                    "",
+                    "60",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -43348,6 +43445,17 @@
                     "State",
                     "=",
                     "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FadeSoundVolume"
+                  },
+                  "parameters": [
+                    "",
+                    "0",
+                    "0",
+                    "0.5"
                   ]
                 }
               ],
