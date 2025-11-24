@@ -3386,7 +3386,13 @@
           "name": "Player1",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "ArrowCreated",
+              "type": "boolean",
+              "value": false
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -5546,7 +5552,13 @@
           "name": "NormalArrow",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "PlayerId",
+              "type": "number",
+              "value": 0
+            }
+          ],
           "effects": [
             {
               "effectType": "Outline",
@@ -5768,7 +5780,13 @@
           "name": "Player2",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "ArrowCreated",
+              "type": "boolean",
+              "value": false
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -7788,7 +7806,13 @@
           "name": "Player3",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "ArrowCreated",
+              "type": "boolean",
+              "value": false
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -9808,7 +9832,13 @@
           "name": "Player4",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "ArrowCreated",
+              "type": "boolean",
+              "value": false
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -32151,7 +32181,7 @@
                       },
                       "parameters": [
                         "",
-                        "2",
+                        "4",
                         "\"A\"",
                         ""
                       ]
@@ -35815,33 +35845,27 @@
                         },
                         {
                           "type": {
-                            "value": "BuiltinCommonInstructions::Once"
+                            "value": "BooleanObjectVariable"
                           },
-                          "parameters": []
+                          "parameters": [
+                            "Player",
+                            "ArrowCreated",
+                            "=",
+                            ""
+                          ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "value": "CreateByName"
+                            "value": "Create"
                           },
                           "parameters": [
                             "",
-                            "Arrow",
-                            "\"NormalArrow\"",
+                            "NormalArrow",
                             "Player.X()",
                             "Player.Y()-10",
                             ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ChangePlan"
-                          },
-                          "parameters": [
-                            "Arrow",
-                            "=",
-                            "10"
                           ]
                         },
                         {
@@ -35851,7 +35875,7 @@
                           "parameters": [
                             "",
                             "Player",
-                            "Arrow"
+                            "NormalArrow"
                           ]
                         },
                         {
@@ -35859,11 +35883,44 @@
                             "value": "MultiplayerArrowShooter::ArrowBehavior::SetPlayerId"
                           },
                           "parameters": [
-                            "Arrow",
+                            "NormalArrow",
                             "ArrowBehavior",
                             "=",
                             "Player.PlayerBehavior::Id()",
                             ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Player",
+                            "ArrowCreated",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MultiplayerArrowShooter::ArrowBehavior::SetState"
+                          },
+                          "parameters": [
+                            "NormalArrow",
+                            "ArrowBehavior",
+                            "=",
+                            "\"Ready\"",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "NormalArrow",
+                            "=",
+                            "10"
                           ]
                         }
                       ]
@@ -35893,26 +35950,25 @@
                             "Player",
                             ""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "MultiplayerArrowShooter::ArrowBehavior::State"
+                          },
+                          "parameters": [
+                            "Arrow",
+                            "ArrowBehavior",
+                            "=",
+                            "\"Ready\"",
+                            ""
+                          ]
                         }
                       ],
                       "actions": [],
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "MultiplayerArrowShooter::ArrowBehavior::State"
-                              },
-                              "parameters": [
-                                "Arrow",
-                                "ArrowBehavior",
-                                "=",
-                                "\"Ready\"",
-                                ""
-                              ]
-                            }
-                          ],
+                          "conditions": [],
                           "actions": [],
                           "events": [
                             {
@@ -35936,6 +35992,17 @@
                                   },
                                   "parameters": [
                                     "Arrow",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "ArrowCreated",
+                                    "False",
                                     ""
                                   ]
                                 }
@@ -36020,27 +36087,9 @@
                                     "\"FiringArrow\"",
                                     ""
                                   ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::Once"
-                                  },
-                                  "parameters": []
                                 }
                               ],
                               "actions": [
-                                {
-                                  "type": {
-                                    "value": "MultiplayerArrowShooter::PlayerBehavior::SetState"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "PlayerBehavior",
-                                    "=",
-                                    "\"Idle\"",
-                                    ""
-                                  ]
-                                },
                                 {
                                   "type": {
                                     "value": "PlaySound"
@@ -36072,6 +36121,29 @@
                                     "PlayerBehavior",
                                     "-",
                                     "1",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "MultiplayerArrowShooter::PlayerBehavior::SetState"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "PlayerBehavior",
+                                    "=",
+                                    "\"Idle\"",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "ArrowCreated",
+                                    "False",
                                     ""
                                   ]
                                 }
@@ -51610,7 +51682,7 @@
               "name": "Vy"
             },
             {
-              "value": "Ready",
+              "value": "Init",
               "type": "Choice",
               "label": "",
               "choices": [
@@ -51625,6 +51697,10 @@
                 {
                   "label": "",
                   "value": "Stopped"
+                },
+                {
+                  "label": "",
+                  "value": "Init"
                 }
               ],
               "hidden": true,
@@ -51641,7 +51717,7 @@
               "name": "PhysicsBehavior"
             },
             {
-              "value": "",
+              "value": "0",
               "type": "Number",
               "label": "",
               "hidden": true,
@@ -76527,7 +76603,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.546875,
+        "zoomFactor": 0.7876290101673753,
         "windowMask": false,
         "selectedLayer": ""
       }
