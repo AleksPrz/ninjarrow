@@ -2958,6 +2958,14 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/logo.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\actual assets\\logo.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -31116,7 +31124,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.6897782140104541,
+        "zoomFactor": 0.5653158055126346,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -31135,6 +31143,9 @@
             },
             {
               "name": "ArrowSelector"
+            },
+            {
+              "name": "Title"
             }
           ]
         },
@@ -31703,6 +31714,23 @@
           "x": 224,
           "y": -544,
           "zOrder": 108,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 416,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Title",
+          "persistentUuid": "6568918a-0591-46ce-8760-ef3ad0994bc8",
+          "width": 576,
+          "x": 352,
+          "y": -64,
+          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -38983,6 +39011,27 @@
               "type": "Tween::TweenBehavior"
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 0,
+          "height": 32,
+          "leftMargin": 0,
+          "name": "Title",
+          "rightMargin": 0,
+          "texture": "assets\\actual assets\\logo.png",
+          "tiled": false,
+          "topMargin": 0,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -39042,6 +39091,9 @@
           },
           {
             "objectName": "Background"
+          },
+          {
+            "objectName": "Title"
           },
           {
             "objectName": "ControlsImg"
@@ -39290,7 +39342,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Main Screen",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -39915,6 +39966,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Play Screen",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -43151,6 +43203,18 @@
                     "=",
                     "544"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\actual assets\\sounds\\ui_move_arrow.wav",
+                    "",
+                    "80",
+                    ""
+                  ]
                 }
               ]
             },
@@ -43227,6 +43291,18 @@
                     "ArrowSelector",
                     "=",
                     "618"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\actual assets\\sounds\\ui_move_arrow.wav",
+                    "",
+                    "80",
+                    ""
                   ]
                 }
               ]
