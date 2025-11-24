@@ -2930,6 +2930,14 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/controls.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\actual assets\\controls.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -23433,7 +23441,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.6040838749988907,
+        "zoomFactor": 0.34375202416123374,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -24003,6 +24011,23 @@
           "x": 704,
           "y": -64,
           "zOrder": 107,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 15,
+          "height": 544,
+          "keepRatio": true,
+          "layer": "",
+          "name": "ControlsImg",
+          "persistentUuid": "c2811fd7-9676-4b56-9654-ed9d07de948d",
+          "width": 832,
+          "x": 224,
+          "y": -544,
+          "zOrder": 108,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -31262,6 +31287,27 @@
             "lineHeight": 0,
             "color": "255;255;255"
           }
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 0,
+          "height": 32,
+          "leftMargin": 0,
+          "name": "ControlsImg",
+          "rightMargin": 0,
+          "texture": "assets\\actual assets\\controls.png",
+          "tiled": false,
+          "topMargin": 0,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -31321,6 +31367,9 @@
           },
           {
             "objectName": "Background"
+          },
+          {
+            "objectName": "ControlsImg"
           }
         ]
       },
@@ -31932,7 +31981,64 @@
                           ]
                         }
                       ],
-                      "actions": []
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "MainOptions",
+                            "Tween",
+                            "\"fade_out\"",
+                            "0",
+                            "\"linear\"",
+                            "0.2",
+                            "no"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                          },
+                          "parameters": [
+                            "ControlsImg",
+                            "Tween",
+                            "\"controls_in\"",
+                            "96",
+                            "\"linear\"",
+                            "0.4",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "Screen",
+                            "=",
+                            "\"Waiting\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "Screen",
+                            "=",
+                            "\"Controls\""
+                          ]
+                        }
+                      ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -31976,7 +32082,6 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -31994,8 +32099,134 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": []
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Escape\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "KeyFromTextPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Space\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "\"B\"",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "\"A\"",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\actual assets\\sounds\\back.wav",
+                        "",
+                        "80",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "Screen",
+                        "=",
+                        "\"Waiting\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+                      },
+                      "parameters": [
+                        "ControlsImg",
+                        "Tween",
+                        "\"controls_out\"",
+                        "-544",
+                        "\"linear\"",
+                        "0.4",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "MainOptions",
+                        "Tween",
+                        "\"fade_in\"",
+                        "255",
+                        "\"linear\"",
+                        "0.2",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "Screen",
+                        "=",
+                        "\"Main\""
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -32086,6 +32317,16 @@
                     },
                     {
                       "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "Screen",
+                        "=",
+                        "\"Waiting\""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "Tween::TweenBehavior::AddObjectPositionXTween2"
                       },
                       "parameters": [
@@ -32096,16 +32337,6 @@
                         "\"linear\"",
                         "0.4",
                         ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetStringVariable"
-                      },
-                      "parameters": [
-                        "Screen",
-                        "=",
-                        "\"Waiting\""
                       ]
                     },
                     {
