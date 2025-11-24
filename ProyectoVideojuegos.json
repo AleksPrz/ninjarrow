@@ -2948,6 +2948,16 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/actual assets/sounds/menu_music.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\actual assets\\sounds\\menu_music.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -39280,6 +39290,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Main Screen",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -39742,6 +39753,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Controls Screen",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -40357,6 +40369,17 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "FadeSoundVolume"
+                      },
+                      "parameters": [
+                        "",
+                        "0",
+                        "0",
+                        "0.3"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "PlaySound"
                       },
                       "parameters": [
@@ -40423,6 +40446,62 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "AnyKeyPressed"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Gamepads::C_Any_Button_pressed"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "MusicPlaying"
+              },
+              "parameters": [
+                "",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlayMusicCanal"
+              },
+              "parameters": [
+                "",
+                "assets\\actual assets\\sounds\\menu_music.mp3",
+                "0",
+                "yes",
+                "60",
+                ""
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -43868,6 +43947,7 @@
                           "actions": [],
                           "events": [
                             {
+                              "disabled": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -57460,16 +57540,6 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "SetStringVariable"
-                      },
-                      "parameters": [
-                        "State",
-                        "=",
-                        "\"Idle\""
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "PlaySoundCanal"
                       },
                       "parameters": [
@@ -57920,6 +57990,7 @@
                           ],
                           "events": [
                             {
+                              "disabled": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -58163,6 +58234,7 @@
                           ],
                           "events": [
                             {
+                              "disabled": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
